@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VV Refeições - Industrial Control System Design System */
+
+@layer base {
+  :root {
+    /* Core Industrial Green Palette */
+    --background: 150 45% 8%;
+    --foreground: 85 35% 92%;
+
+    --card: 150 40% 12%;
+    --card-foreground: 85 35% 92%;
+
+    --popover: 150 40% 10%;
+    --popover-foreground: 85 35% 92%;
+
+    /* Brand Primary - Emerald Control */
+    --primary: 152 70% 45%;
+    --primary-foreground: 150 45% 8%;
+
+    /* Secondary - Muted Industrial */
+    --secondary: 150 30% 18%;
+    --secondary-foreground: 85 35% 85%;
+
+    --muted: 150 25% 15%;
+    --muted-foreground: 150 15% 55%;
+
+    --accent: 152 65% 40%;
+    --accent-foreground: 150 45% 8%;
+
+    /* Status Colors - Critical for Replenishment System */
+    --status-ok: 142 76% 45%;
+    --status-ok-foreground: 142 76% 10%;
+    
+    --status-attention: 38 92% 50%;
+    --status-attention-foreground: 38 92% 10%;
+    
+    --status-missing: 0 84% 55%;
+    --status-missing-foreground: 0 0% 100%;
+    
+    --status-overdue: 0 95% 45%;
+    --status-overdue-foreground: 0 0% 100%;
+    
+    --status-preparing: 200 90% 50%;
+    --status-preparing-foreground: 200 90% 10%;
+
+    /* Destructive */
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and Inputs */
+    --border: 150 25% 22%;
+    --input: 150 25% 18%;
+    --ring: 152 70% 45%;
+
+    --radius: 0.625rem;
+
+    /* Industrial Shadows */
+    --shadow-glow-ok: 0 0 20px hsl(142 76% 45% / 0.4);
+    --shadow-glow-attention: 0 0 20px hsl(38 92% 50% / 0.4);
+    --shadow-glow-missing: 0 0 25px hsl(0 84% 55% / 0.5);
+    --shadow-glow-overdue: 0 0 30px hsl(0 95% 45% / 0.6);
+
+    /* Sidebar - Industrial Panel */
+    --sidebar-background: 150 40% 10%;
+    --sidebar-foreground: 85 35% 85%;
+    --sidebar-primary: 152 70% 45%;
+    --sidebar-primary-foreground: 150 45% 8%;
+    --sidebar-accent: 150 30% 16%;
+    --sidebar-accent-foreground: 85 35% 90%;
+    --sidebar-border: 150 25% 20%;
+    --sidebar-ring: 152 70% 45%;
+  }
+
+  /* Light Theme */
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 150 45% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 45% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 45% 10%;
+
+    --primary: 152 70% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 15% 92%;
+    --secondary-foreground: 150 45% 15%;
+
+    --muted: 150 10% 94%;
+    --muted-foreground: 150 15% 40%;
+
+    --accent: 152 65% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors - Slightly adjusted for light mode visibility */
+    --status-ok: 142 72% 35%;
+    --status-ok-foreground: 0 0% 100%;
+    
+    --status-attention: 38 95% 45%;
+    --status-attention-foreground: 38 95% 10%;
+    
+    --status-missing: 0 80% 50%;
+    --status-missing-foreground: 0 0% 100%;
+    
+    --status-overdue: 0 90% 40%;
+    --status-overdue-foreground: 0 0% 100%;
+    
+    --status-preparing: 200 85% 45%;
+    --status-preparing-foreground: 0 0% 100%;
+
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 85%;
+    --input: 150 15% 90%;
+    --ring: 152 70% 35%;
+
+    /* Industrial Shadows - Softer for light mode */
+    --shadow-glow-ok: 0 0 15px hsl(142 72% 35% / 0.3);
+    --shadow-glow-attention: 0 0 15px hsl(38 95% 45% / 0.3);
+    --shadow-glow-missing: 0 0 20px hsl(0 80% 50% / 0.4);
+    --shadow-glow-overdue: 0 0 25px hsl(0 90% 40% / 0.5);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 150 45% 15%;
+    --sidebar-primary: 152 70% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 10% 94%;
+    --sidebar-accent-foreground: 150 45% 15%;
+    --sidebar-border: 150 15% 88%;
+    --sidebar-ring: 152 70% 35%;
+  }
+
+  /* Dark Theme (default) */
+  .dark {
+    --background: 150 50% 6%;
+    --foreground: 85 35% 95%;
+    --card: 150 45% 9%;
+    --card-foreground: 85 35% 95%;
+    --popover: 150 45% 7%;
+    --popover-foreground: 85 35% 95%;
+    --primary: 152 75% 48%;
+    --primary-foreground: 150 50% 6%;
+    --secondary: 150 35% 14%;
+    --secondary-foreground: 85 35% 90%;
+    --muted: 150 30% 12%;
+    --muted-foreground: 150 18% 50%;
+    --accent: 152 70% 42%;
+    --accent-foreground: 150 50% 6%;
+    --border: 150 30% 18%;
+    --input: 150 30% 14%;
+    --ring: 152 75% 48%;
+    --sidebar-background: 150 50% 6%;
+    --sidebar-foreground: 85 35% 92%;
+    --sidebar-primary: 152 75% 48%;
+    --sidebar-primary-foreground: 150 50% 6%;
+    --sidebar-accent: 150 35% 12%;
+    --sidebar-accent-foreground: 85 35% 92%;
+    --sidebar-border: 150 30% 16%;
+    --sidebar-ring: 152 75% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Scrollbar Industrial */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full hover:bg-muted-foreground/40 transition-colors;
+  }
+}
+
+@layer utilities {
+  /* Status Indicator Classes */
+  .status-ok {
+    @apply bg-status-ok text-status-ok-foreground;
+    box-shadow: var(--shadow-glow-ok);
+  }
+
+  .status-attention {
+    @apply bg-status-attention text-status-attention-foreground;
+    box-shadow: var(--shadow-glow-attention);
+  }
+
+  .status-missing {
+    @apply bg-status-missing text-status-missing-foreground;
+    box-shadow: var(--shadow-glow-missing);
+  }
+
+  .status-overdue {
+    @apply bg-status-overdue text-status-overdue-foreground;
+    box-shadow: var(--shadow-glow-overdue);
+  }
+
+  .status-preparing {
+    @apply bg-status-preparing text-status-preparing-foreground;
+  }
+
+  /* Industrial Monitor Text */
+  .font-mono-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Pulsing Animation for Alerts */
+  .pulse-alert {
+    animation: pulse-alert 1s ease-in-out infinite;
+  }
+
+  .pulse-overdue {
+    animation: pulse-overdue 0.5s ease-in-out infinite;
+  }
+
+  /* Glass Effect for Cards */
+  .glass-card {
+    @apply backdrop-blur-md bg-card/80 border border-border/50;
+  }
+
+  /* Full Screen Monitor Mode */
+  .monitor-fullscreen {
+    @apply fixed inset-0 z-50 bg-background overflow-hidden;
+  }
+}
+
+@layer components {
+  /* Industrial Header */
+  .industrial-header {
+    @apply bg-gradient-to-r from-card via-secondary to-card;
+    @apply border-b-2 border-primary/50;
+    @apply shadow-lg shadow-primary/10;
+  }
+
+  /* Ramp Card */
+  .ramp-card {
+    @apply relative overflow-hidden rounded-lg border-2 transition-all duration-300;
+    @apply hover:scale-[1.02] hover:shadow-lg;
+  }
+
+  .ramp-card-ok {
+    @apply border-status-ok/50 bg-gradient-to-br from-status-ok/10 to-status-ok/5;
+  }
+
+  .ramp-card-attention {
+    @apply border-status-attention/50 bg-gradient-to-br from-status-attention/10 to-status-attention/5;
+  }
+
+  .ramp-card-missing {
+    @apply border-status-missing/60 bg-gradient-to-br from-status-missing/15 to-status-missing/5;
+  }
+
+  /* Status Badge */
+  .status-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider;
+    @apply transition-all duration-200;
+  }
+
+  /* Timer Display */
+  .timer-display {
+    @apply font-mono-display text-2xl font-bold tracking-tight;
+  }
+
+  /* Monitor Grid */
+  .monitor-grid {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  /* Action Button - Large Touch Targets for Mobile */
+  .action-btn {
+    @apply min-h-[56px] px-6 rounded-xl font-bold text-base;
+    @apply transition-all duration-200 active:scale-95;
+    @apply touch-manipulation;
+  }
+
+  /* Legend Bar */
+  .legend-bar {
+    @apply flex items-center justify-center gap-6 py-3 px-4;
+    @apply bg-card/50 backdrop-blur-sm border-t border-border/50;
+  }
+}
+
+/* Keyframes */
+@keyframes pulse-alert {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes pulse-overdue {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 30px hsl(0 95% 45% / 0.6);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 50px hsl(0 95% 45% / 0.8);
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in-up 0.4s ease-out forwards;
+}
