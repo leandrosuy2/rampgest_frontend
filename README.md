@@ -168,6 +168,8 @@ Por padrão o **Vite** está configurado para:
 
 Abra no navegador: **http://localhost:8080**
 
+Alguns ambientes (por exemplo IDEs na nuvem ou **supervisord**) executam **`npm start`** em vez de `npm run dev`. Neste projeto, `npm start` sobe o **mesmo servidor Vite** em `0.0.0.0:8080`. Para servir o **build de produção** (`dist/`), use `npm run build` e depois `npm run preview` (porta **8080** via `vite.config.ts`).
+
 ### 6. Build para produção
 
 Gera os arquivos estáticos em `dist/`:
@@ -186,6 +188,7 @@ npm run preview
 
 | Comando | Função |
 |---------|--------|
+| `npm start` | Servidor Vite (dev) em `0.0.0.0:8080` — para plataformas que só chamam `start` |
 | `npm run lint` | Executa o ESLint no projeto |
 | `npm run test` | Roda os testes (Vitest) uma vez |
 | `npm run test:watch` | Testes em modo observação |

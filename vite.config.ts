@@ -13,6 +13,10 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  preview: {
+    host: true,
+    port: 8080,
+  },
   plugins: [
     react(),
     mode === "development" && componentTagger(),
