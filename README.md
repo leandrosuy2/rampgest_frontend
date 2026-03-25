@@ -199,8 +199,6 @@ O resultado de `npm run build` é um site **estático** (`dist/`). Você pode pu
 
 **Importante:** configure as **mesmas variáveis `VITE_*`** no painel da hospedagem (ambiente de build e, se necessário, runtime conforme a plataforma).
 
-Se você também usa o fluxo **Lovable**, a publicação pode ser feita por lá (**Share → Publish**), conforme a documentação da ferramenta.
-
 ---
 
 ## Estrutura de pastas (resumo)
@@ -220,6 +218,6 @@ reposicao/
 
 ---
 
-## Licença e origem
+## Licença
 
-Projeto gerado/editado no ecossistema **Lovable** / desenvolvimento local; ajuste licença e créditos conforme a política da sua organização.
+Defina a licença e os créditos conforme a política da sua organização (por exemplo, adicionando um arquivo `LICENSE` na raiz do repositório).
