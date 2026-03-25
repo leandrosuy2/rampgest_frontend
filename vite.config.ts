@@ -9,6 +9,11 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    // EasyPanel e outros hosts atrás de reverse proxy (Host header)
+    allowedHosts: [
+      "ticket-rampgest-frontend.hlz1f3.easypanel.host",
+      ".easypanel.host",
+    ],
     hmr: {
       overlay: false,
     },
@@ -16,6 +21,10 @@ export default defineConfig(({ mode }) => ({
   preview: {
     host: true,
     port: 8080,
+    allowedHosts: [
+      "ticket-rampgest-frontend.hlz1f3.easypanel.host",
+      ".easypanel.host",
+    ],
   },
   plugins: [
     react(),
