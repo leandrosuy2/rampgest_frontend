@@ -47,8 +47,8 @@ export function useNotifications(): UseNotificationsReturn {
     if (document.hidden) {
       try {
         const notificationOptions: NotificationOptions = {
-          icon: '/favicon.ico',
-          badge: '/favicon.ico',
+          icon: '/pwa-192x192.png',
+          badge: '/pwa-192x192.png',
           requireInteraction: true,
           ...options,
         };
