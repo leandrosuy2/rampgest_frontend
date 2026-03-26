@@ -24,6 +24,7 @@ import AdminSchedules from "./pages/admin/Schedules";
 import StatsDashboard from "./pages/StatsDashboard";
 import Profile from "./pages/Profile";
 import Install from "./pages/Install";
+import AdminBootstrap from "./pages/AdminBootstrap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +51,7 @@ function AnimatedRoutes() {
         <Route path="/dashboard" element={<StatsDashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/install" element={<Install />} />
+        <Route path="/setup/:token" element={<AdminBootstrap />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </PageTransition>
